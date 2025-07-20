@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2gh6esf8gooh"]
+
+[ext_resource type="Script" uid="uid://cxjc5g6mkcb2m" path="res://scripts/ui/loading/loading.gd" id="1_0ih7j"]
+[ext_resource type="FontFile" uid="uid://by5mb5p4vx6lo" path="res://assets/fonts/press-start-2p/PressStart2P-vaV7.ttf" id="1_35gka"]
+[ext_resource type="PackedScene" uid="uid://1x25pxyfukvu" path="res://scenes/ui/pre_main_menu.tscn" id="2_sjr32"]
+[ext_resource type="Shader" uid="uid://do1a2bvioygjq" path="res://shaders/ui/loading.gdshader" id="2_wkfxc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0ih7j"]
+shader = ExtResource("2_wkfxc")
+shader_parameter/speed = 0.5
+shader_parameter/bar_height = 0.05
+shader_parameter/brightness_dark = 0.3
+shader_parameter/brightness_light = 1.0
+
+[node name="loading" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_0ih7j")
+pre_main_menu_scene_res_path = ExtResource("2_sjr32")
+
+[node name="color_rect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_0ih7j")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="panel_container" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="v_box_container" type="VBoxContainer" parent="panel_container"]
+layout_mode = 2
+
+[node name="margin_container" type="MarginContainer" parent="panel_container/v_box_container"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.8
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="color_rect" type="ColorRect" parent="panel_container/v_box_container/margin_container"]
+layout_mode = 2
+color = Color(0.23921569, 0.19215687, 0.6313726, 1)
+
+[node name="margin_container" type="MarginContainer" parent="panel_container/v_box_container/margin_container"]
+layout_mode = 2
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="loading_label" type="Label" parent="panel_container/v_box_container/margin_container/margin_container"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.49411765, 0.44313726, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("1_35gka")
+theme_override_font_sizes/font_size = 25
+text = "LOADING... 0%"
+horizontal_alignment = 2
+vertical_alignment = 2
