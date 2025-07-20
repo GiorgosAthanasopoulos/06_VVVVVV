@@ -7,7 +7,7 @@ extends Control
 
 func _on_quit_button_pressed() -> void:
 	# TODO: escape menu
-	pass
+	SceneManager.quit()
 
 
 func _on_credits_button_pressed() -> void:
