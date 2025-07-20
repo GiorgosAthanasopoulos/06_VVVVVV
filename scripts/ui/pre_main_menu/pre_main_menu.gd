@@ -1,7 +1,7 @@
 extends Control
 
 
-@export var action_input_map: String = "action"
+@export var action_input_map: String = "ui_accept"
 @export var main_menu_scene_res_path: PackedScene
 
 
