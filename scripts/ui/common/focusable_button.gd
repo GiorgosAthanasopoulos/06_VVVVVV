@@ -2,7 +2,7 @@ extends Button
 
 
 @export var original_text: String = text
-@export var WHITESPACE_BETWEEN_BRACKETS_TEXT: int = 5
+@export var WHITESPACE_BETWEEN_BRACKETS_TEXT: int = 1
 @export var left_char: String = "["
 @export var right_char: String = "]"
 
