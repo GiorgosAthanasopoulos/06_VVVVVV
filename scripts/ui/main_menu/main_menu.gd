@@ -23,11 +23,9 @@ func _process(_delta: float) -> void:
 			hide_pause_menu()
 		else:
 			show_pause_menu()
-		modulate = ColorController.get_next_color()
 
 
 func _on_quit_button_pressed() -> void:
-	modulate = ColorController.get_next_color()
 	show_pause_menu()
 
 
@@ -55,12 +53,14 @@ func _on_no_return_button_pressed() -> void:
 
 
 func show_pause_menu() -> void:
+	modulate = ColorController.get_next_color()
 	main_menu_ui.visible = false
 	pause_menu_ui.visible = true
 	yes_quit_button.grab_focus()
 
 
 func hide_pause_menu() -> void:
+	modulate = ColorController.get_next_color()
 	pause_menu_ui.visible = false
 	main_menu_ui.visible = true
 	levels_button.grab_focus()
