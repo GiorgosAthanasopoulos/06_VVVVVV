@@ -61,8 +61,11 @@ focus_neighbor_top = NodePath("../../margin_container_4/quit_button")
 focus_neighbor_bottom = NodePath("../../margin_container_2/options_button")
 focus_next = NodePath("../../margin_container_2/options_button")
 focus_previous = NodePath("../../margin_container_4/quit_button")
+theme_override_fonts/font = ExtResource("1_sl1te")
 text = "levels"
 script = ExtResource("2_fe2o3")
+original_text = "levels"
+WHITESPACE_BETWEEN_BRACKETS_TEXT = 1
 
 [node name="margin_container_2" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_2/v_box_container"]
 layout_mode = 2
@@ -75,8 +78,11 @@ focus_neighbor_top = NodePath("../../margin_container/levels_button")
 focus_neighbor_bottom = NodePath("../../margin_container_3/credits_button")
 focus_next = NodePath("../../margin_container_3/credits_button")
 focus_previous = NodePath("../../margin_container/levels_button")
+theme_override_fonts/font = ExtResource("1_sl1te")
 text = "options"
 script = ExtResource("3_1g8jr")
+original_text = "options"
+WHITESPACE_BETWEEN_BRACKETS_TEXT = 1
 
 [node name="margin_container_3" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_2/v_box_container"]
 layout_mode = 2
@@ -89,8 +95,11 @@ focus_neighbor_top = NodePath("../../margin_container_2/options_button")
 focus_neighbor_bottom = NodePath("../../margin_container_4/quit_button")
 focus_next = NodePath("../../margin_container_4/quit_button")
 focus_previous = NodePath("../../margin_container_2/options_button")
+theme_override_fonts/font = ExtResource("1_sl1te")
 text = "credits"
 script = ExtResource("3_1g8jr")
+original_text = "credits"
+WHITESPACE_BETWEEN_BRACKETS_TEXT = 1
 
 [node name="margin_container_4" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_2/v_box_container"]
 layout_mode = 2
@@ -103,8 +112,11 @@ focus_neighbor_top = NodePath("../../margin_container_3/credits_button")
 focus_neighbor_bottom = NodePath("../../margin_container/levels_button")
 focus_next = NodePath("../../margin_container/levels_button")
 focus_previous = NodePath("../../margin_container_3/credits_button")
+theme_override_fonts/font = ExtResource("1_sl1te")
 text = "quit"
 script = ExtResource("3_1g8jr")
+original_text = "quit"
+WHITESPACE_BETWEEN_BRACKETS_TEXT = 1
 
 [node name="margin_container_3" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
 layout_mode = 2
@@ -122,7 +134,78 @@ text = "v2.4.3"
 horizontal_alignment = 2
 vertical_alignment = 2
 
+[node name="pause_menu_panel_container" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="margin_container" type="MarginContainer" parent="pause_menu_panel_container"]
+layout_mode = 2
+
+[node name="v_box_container" type="VBoxContainer" parent="pause_menu_panel_container/margin_container"]
+layout_mode = 2
+
+[node name="margin_container_4" type="MarginContainer" parent="pause_menu_panel_container/margin_container/v_box_container"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme_override_constants/margin_bottom = 50
+
+[node name="label" type="Label" parent="pause_menu_panel_container/margin_container/v_box_container/margin_container_4"]
+layout_mode = 2
+size_flags_vertical = 10
+size_flags_stretch_ratio = 0.3
+theme_override_fonts/font = ExtResource("1_sl1te")
+theme_override_font_sizes/font_size = 30
+text = "Are you sure you want to quit?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="margin_container" type="MarginContainer" parent="pause_menu_panel_container/margin_container/v_box_container"]
+layout_mode = 2
+theme_override_constants/margin_left = -50
+theme_override_constants/margin_bottom = 10
+
+[node name="yes_quit_button" type="Button" parent="pause_menu_panel_container/margin_container/v_box_container/margin_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../../margin_container_2/no_return_button")
+focus_neighbor_bottom = NodePath("../../margin_container_2/no_return_button")
+focus_next = NodePath("../../margin_container_2/no_return_button")
+focus_previous = NodePath("../../margin_container_2/no_return_button")
+theme_override_fonts/font = ExtResource("1_sl1te")
+text = "yes, quit"
+script = ExtResource("3_1g8jr")
+
+[node name="margin_container_2" type="MarginContainer" parent="pause_menu_panel_container/margin_container/v_box_container"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 10
+
+[node name="no_return_button" type="Button" parent="pause_menu_panel_container/margin_container/v_box_container/margin_container_2"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../../margin_container/yes_quit_button")
+focus_neighbor_bottom = NodePath("../../margin_container/yes_quit_button")
+focus_next = NodePath("../../margin_container/yes_quit_button")
+focus_previous = NodePath("../../margin_container/yes_quit_button")
+theme_override_fonts/font = ExtResource("1_sl1te")
+text = "no, return"
+script = ExtResource("3_1g8jr")
+original_text = "no, return"
+
+[node name="margin_container_3" type="MarginContainer" parent="pause_menu_panel_container/margin_container/v_box_container"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
+
 [connection signal="pressed" from="panel_container/margin_container/v_box_container/margin_container_2/v_box_container/margin_container/levels_button" to="." method="_on_levels_button_pressed"]
 [connection signal="pressed" from="panel_container/margin_container/v_box_container/margin_container_2/v_box_container/margin_container_2/options_button" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="panel_container/margin_container/v_box_container/margin_container_2/v_box_container/margin_container_3/credits_button" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="panel_container/margin_container/v_box_container/margin_container_2/v_box_container/margin_container_4/quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="pause_menu_panel_container/margin_container/v_box_container/margin_container/yes_quit_button" to="." method="_on_yes_quit_button_pressed"]
+[connection signal="pressed" from="pause_menu_panel_container/margin_container/v_box_container/margin_container_2/no_return_button" to="." method="_on_no_return_button_pressed"]
