@@ -20,7 +20,7 @@ config/icon="res://assets/icons/godot/icon.svg"
 
 Dialogs="*res://scripts/utils/dialogs.gd"
 SceneManager="*res://scripts/utils/scene_manager.gd"
-ColorController="*res://scripts/ui/common/color_controller.gd"
+ColorController="*res://scripts/utils/color_controller.gd"
 
 [debug]
 
