@@ -10,7 +10,7 @@ extends Control
 
 @export var levels_scene_res_path: String = "res://scenes/ui/levels/levels.tscn"
 @export var options_scene_res_path: String = "res://scenes/ui/options/options.tscn"
-@export var credits_scene_res_path: String = "res://scenes/ui/credits/credits.tscn"
+@export var credits_scene_res_path: String = "res://scenes/ui/credits/0-10/credits.tscn"
 
 
 func _ready() -> void:
