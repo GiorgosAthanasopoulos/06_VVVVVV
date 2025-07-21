@@ -11,4 +11,5 @@ func _process(_delta: float) -> void:
 
 func _on_action_pressed() -> void:
 	if ! await SceneManager.goto_scene(SceneManager.main_menu_scene_res_path):
-		SceneManager.quit(SceneManager.ERROR_EXIT_CODE)
+		pass
+		#SceneManager.quit(SceneManager.ERROR_EXIT_CODE)

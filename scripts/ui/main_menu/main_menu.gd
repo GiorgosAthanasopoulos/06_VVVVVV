@@ -31,17 +31,20 @@ func _on_quit_button_pressed() -> void:
 
 func _on_credits_button_pressed() -> void:
 	if ! await SceneManager.goto_scene(credits_scene_res_path):
-		SceneManager.quit(SceneManager.ERROR_EXIT_CODE)
+		pass
+		#SceneManager.quit(SceneManager.ERROR_EXIT_CODE)
 
 
 func _on_options_button_pressed() -> void:
 	if ! await SceneManager.goto_scene(options_scene_res_path):
-		SceneManager.quit(SceneManager.ERROR_EXIT_CODE)
+		pass
+		#SceneManager.quit(SceneManager.ERROR_EXIT_CODE)
 
 
 func _on_levels_button_pressed() -> void:
 	if ! await SceneManager.goto_scene(levels_scene_res_path):
-		SceneManager.quit(SceneManager.ERROR_EXIT_CODE)
+		pass
+		#SceneManager.quit(SceneManager.ERROR_EXIT_CODE)
 
 
 func _on_yes_quit_button_pressed() -> void:

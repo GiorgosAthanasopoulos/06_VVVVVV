@@ -23,4 +23,5 @@ func update_loading_percentage(delta: float) -> void:
 
 	if _loading_percentage == 100:
 		if ! await SceneManager.goto_scene(pre_main_menu_scene_res_path):
-			SceneManager.quit(SceneManager.ERROR_EXIT_CODE)
+			pass
+			#SceneManager.quit(SceneManager.ERROR_EXIT_CODE)
