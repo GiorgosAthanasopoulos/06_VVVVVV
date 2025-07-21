@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://nxqj3gxyijdo"]
 
 [ext_resource type="Shader" uid="uid://dblpf6kqicmwe" path="res://shaders/ui/main_menu/main_menu.gdshader" id="1_jkvjv"]
-[ext_resource type="Script" uid="uid://citeo3xtodiim" path="res://scripts/ui/credits/credits.gd" id="1_pqmjv"]
+[ext_resource type="Script" uid="uid://citeo3xtodiim" path="res://scripts/ui/credits/0-10/credits.gd" id="1_pqmjv"]
 [ext_resource type="Script" uid="uid://b1xujapfac4gb" path="res://scripts/ui/common/firstly_focused_button.gd" id="4_y0bee"]
 [ext_resource type="Script" uid="uid://bdof8ab4mpjat" path="res://scripts/ui/common/focusable_button.gd" id="5_gleon"]
 

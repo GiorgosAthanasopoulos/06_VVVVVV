@@ -11,14 +11,17 @@ func _ready() -> void:
 
 func _on_return_button_pressed() -> void:
 	if ! await SceneManager.goto_scene(SceneManager.main_menu_scene_res_path):
-		SceneManager.quit(SceneManager.ERROR_EXIT_CODE)
+		pass
+		#SceneManager.quit(SceneManager.ERROR_EXIT_CODE)
 
 
 func _on_next_page_button_pressed() -> void:
 	if ! await SceneManager.goto_scene(next_page_scene_res_path):
-		SceneManager.quit(SceneManager.ERROR_EXIT_CODE)
+		pass
+		#SceneManager.quit(SceneManager.ERROR_EXIT_CODE)
 
 
 func _on_last_page_button_pressed() -> void:
 	if ! await SceneManager.goto_scene(last_page_scene_res_path):
-		SceneManager.quit(SceneManager.ERROR_EXIT_CODE)
+		pass
+		#SceneManager.quit(SceneManager.ERROR_EXIT_CODE)
