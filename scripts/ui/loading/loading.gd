@@ -22,5 +22,5 @@ func update_loading_percentage(delta: float) -> void:
 	loading_label.text = loading_text + str(_loading_percentage as int) + "%"
 
 	if _loading_percentage == 100:
-		if !SceneManager.goto_scene(pre_main_menu_scene_res_path):
+		if ! await SceneManager.goto_scene(pre_main_menu_scene_res_path):
 			SceneManager.quit(SceneManager.ERROR_EXIT_CODE)

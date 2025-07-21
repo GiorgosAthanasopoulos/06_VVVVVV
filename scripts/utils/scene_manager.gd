@@ -1,9 +1,12 @@
 extends Node
 
 
-const FAILED_CHANGE_SCENE_MSG: String = "Failed to change scene to file= `"
+const FAILED_CHANGE_SCENE_MSG: String = "Failed to change scene to file\nScene= "
 const SUCCESS_EXIT_CODE: int = 0
 const ERROR_EXIT_CODE: int = 1
+
+
+const main_menu_scene_res_path: String = "res://scenes/ui/main_menu/main_menu.tscn"
 
 
 func goto_scene(scene: String) -> bool:
@@ -12,9 +15,9 @@ func goto_scene(scene: String) -> bool:
 	var error: Error = get_tree().change_scene_to_file(scene)
 
 	if error != OK:
-		var msg: String = "".join([FAILED_CHANGE_SCENE_MSG, scene, "`: ", error_string(error)])
+		var msg: String = "".join([FAILED_CHANGE_SCENE_MSG, scene, "\nReason= ", error_string(error)])
 		push_error(msg)
-		Dialogs.show_accept_dialog(msg)
+		await Dialogs.show_accept_dialog(msg)
 		return false
 
 	return true

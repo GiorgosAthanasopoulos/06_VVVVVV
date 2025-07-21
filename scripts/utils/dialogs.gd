@@ -10,3 +10,4 @@ func _ready() -> void:
 func show_accept_dialog(msg: String) -> void:
 	accept_dialog.dialog_text = msg
 	accept_dialog.popup_centered()
+	await accept_dialog.confirmed
