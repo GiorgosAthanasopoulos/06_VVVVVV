@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://4qi4wk5l3xtt"]
+[gd_scene load_steps=7 format=3 uid="uid://4qi4wk5l3xtt"]
 
 [ext_resource type="Script" uid="uid://b34ougfgwlaox" path="res://scripts/ui/main_menu/main_menu.gd" id="1_m1kxf"]
 [ext_resource type="FontFile" uid="uid://by5mb5p4vx6lo" path="res://assets/fonts/press-start-2p/PressStart2P-vaV7.ttf" id="1_sl1te"]
 [ext_resource type="Script" uid="uid://b1xujapfac4gb" path="res://scripts/ui/main_menu/firstly_focused_button.gd" id="2_fe2o3"]
+[ext_resource type="Shader" uid="uid://dblpf6kqicmwe" path="res://shaders/ui/main_menu.gdshader" id="2_x2yvf"]
 [ext_resource type="Script" uid="uid://bdof8ab4mpjat" path="res://scripts/ui/main_menu/focusable_button.gd" id="3_1g8jr"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uhagc"]
+shader = ExtResource("2_x2yvf")
+shader_parameter/main_color = Color(1, 1, 1, 1)
+shader_parameter/speed = 1.0
+shader_parameter/intensity = 0.25
 
 [node name="main_menu" type="Control"]
 layout_mode = 3
@@ -15,6 +22,15 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_m1kxf")
+
+[node name="color_rect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_uhagc")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="panel_container" type="PanelContainer" parent="."]
 layout_mode = 1
