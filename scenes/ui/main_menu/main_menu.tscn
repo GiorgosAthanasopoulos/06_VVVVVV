@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://by5mb5p4vx6lo" path="res://assets/fonts/press-start-2p/PressStart2P-vaV7.ttf" id="1_sl1te"]
 [ext_resource type="Script" uid="uid://b1xujapfac4gb" path="res://scripts/ui/common/firstly_focused_button.gd" id="2_fe2o3"]
 [ext_resource type="PackedScene" uid="uid://dudrjdmtm64p6" path="res://scenes/ui/levels/levels.tscn" id="2_wb0q5"]
-[ext_resource type="Shader" uid="uid://dblpf6kqicmwe" path="res://shaders/ui/main_menu.gdshader" id="2_x2yvf"]
+[ext_resource type="Shader" uid="uid://dblpf6kqicmwe" path="res://shaders/ui/main_menu/main_menu.gdshader" id="2_x2yvf"]
 [ext_resource type="Script" uid="uid://bdof8ab4mpjat" path="res://scripts/ui/common/focusable_button.gd" id="3_1g8jr"]
 [ext_resource type="PackedScene" uid="uid://cv06lhqjkyv2b" path="res://scenes/ui/options/options.tscn" id="3_q85j6"]
 [ext_resource type="PackedScene" uid="uid://nxqj3gxyijdo" path="res://scenes/ui/credits/credits.tscn" id="4_8g5eo"]
