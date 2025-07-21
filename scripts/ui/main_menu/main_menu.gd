@@ -8,9 +8,9 @@ extends Control
 @onready var yes_quit_button: Button = $pause_menu_panel_container/margin_container/v_box_container/margin_container/yes_quit_button
 
 
-@export var levels_scene_res_path: String = "res://scenes/ui/levels.tscn"
-@export var options_scene_res_path: String = "res://scenes/ui/options.tscn"
-@export var credits_scene_res_path: String = "res://scenes/ui/credits.tscn"
+@export var levels_scene_res_path: String = "res://scenes/ui/levels/levels.tscn"
+@export var options_scene_res_path: String = "res://scenes/ui/options/options.tscn"
+@export var credits_scene_res_path: String = "res://scenes/ui/credits/credits.tscn"
 
 
 func _ready() -> void:

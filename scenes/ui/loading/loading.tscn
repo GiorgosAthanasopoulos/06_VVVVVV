@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://b2gh6esf8gooh"]
+[gd_scene load_steps=5 format=3 uid="uid://b2gh6esf8gooh"]
 
 [ext_resource type="Script" uid="uid://cxjc5g6mkcb2m" path="res://scripts/ui/loading/loading.gd" id="1_0ih7j"]
 [ext_resource type="FontFile" uid="uid://by5mb5p4vx6lo" path="res://assets/fonts/press-start-2p/PressStart2P-vaV7.ttf" id="1_35gka"]
-[ext_resource type="PackedScene" uid="uid://1x25pxyfukvu" path="res://scenes/ui/pre_main_menu/pre_main_menu.tscn" id="2_sjr32"]
 [ext_resource type="Shader" uid="uid://do1a2bvioygjq" path="res://shaders/ui/loading/loading.gdshader" id="2_wkfxc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0ih7j"]
@@ -22,7 +21,6 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_0ih7j")
-pre_main_menu_scene_res_path = ExtResource("2_sjr32")
 
 [node name="color_rect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_0ih7j")

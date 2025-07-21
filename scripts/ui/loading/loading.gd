@@ -6,7 +6,7 @@ extends Control
 
 @export var loading_text: String = "LOADING... "
 @export var loading_duration_seconds: int = 3
-@export var pre_main_menu_scene_res_path: String = "res://scenes/ui/pre_main_menu.tscn"
+@export var pre_main_menu_scene_res_path: String = "res://scenes/ui/pre_main_menu/pre_main_menu.tscn"
 
 
 var _loading_percentage: float = 0
