@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://nxqj3gxyijdo"]
+[gd_scene load_steps=6 format=3 uid="uid://nxqj3gxyijdo"]
 
 [ext_resource type="Shader" uid="uid://dblpf6kqicmwe" path="res://shaders/ui/main_menu/main_menu.gdshader" id="1_jkvjv"]
 [ext_resource type="Script" uid="uid://citeo3xtodiim" path="res://scripts/ui/credits/credits.gd" id="1_pqmjv"]
-[ext_resource type="FontFile" uid="uid://by5mb5p4vx6lo" path="res://assets/fonts/press-start-2p/PressStart2P-vaV7.ttf" id="3_pqmjv"]
 [ext_resource type="Script" uid="uid://b1xujapfac4gb" path="res://scripts/ui/common/firstly_focused_button.gd" id="4_y0bee"]
 [ext_resource type="Script" uid="uid://bdof8ab4mpjat" path="res://scripts/ui/common/focusable_button.gd" id="5_gleon"]
 
@@ -59,13 +58,11 @@ size_flags_stretch_ratio = 0.15
 [node name="label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_2"]
 layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource("3_pqmjv")
 text = "VVVVVV is a game by"
 horizontal_alignment = 1
 
 [node name="label_2" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_2"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_pqmjv")
 theme_override_font_sizes/font_size = 40
 text = "Terry Cavanagh"
 horizontal_alignment = 1
@@ -73,7 +70,6 @@ horizontal_alignment = 1
 [node name="label_3" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_2"]
 layout_mode = 2
 size_flags_vertical = 8
-theme_override_fonts/font = ExtResource("3_pqmjv")
 text = "HTTP://WWW.DISTRACTIONSOFTWARE.COM"
 horizontal_alignment = 1
 
@@ -90,13 +86,11 @@ size_flags_stretch_ratio = 0.15
 [node name="label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_4"]
 layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource("3_pqmjv")
 text = "and features music by"
 horizontal_alignment = 1
 
 [node name="label_2" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_4"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_pqmjv")
 theme_override_font_sizes/font_size = 40
 text = "Magnus Palsson"
 horizontal_alignment = 1
@@ -104,7 +98,6 @@ horizontal_alignment = 1
 [node name="label_3" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_4"]
 layout_mode = 2
 size_flags_vertical = 8
-theme_override_fonts/font = ExtResource("3_pqmjv")
 text = "HTTP://SOULEYE.SE"
 horizontal_alignment = 1
 
@@ -130,7 +123,6 @@ focus_neighbor_top = NodePath("../../margin_container_2/return_button")
 focus_neighbor_bottom = NodePath("../../last_page_button")
 focus_next = NodePath("../../last_page_button")
 focus_previous = NodePath("../../margin_container_2/return_button")
-theme_override_fonts/font = ExtResource("3_pqmjv")
 text = "next page"
 script = ExtResource("4_y0bee")
 
@@ -142,7 +134,6 @@ focus_neighbor_top = NodePath("../margin_container/next_page_button")
 focus_neighbor_bottom = NodePath("../margin_container_2/return_button")
 focus_next = NodePath("../margin_container_2/return_button")
 focus_previous = NodePath("../margin_container/next_page_button")
-theme_override_fonts/font = ExtResource("3_pqmjv")
 text = "last page"
 script = ExtResource("5_gleon")
 
@@ -158,7 +149,6 @@ focus_neighbor_top = NodePath("../../last_page_button")
 focus_neighbor_bottom = NodePath("../../margin_container/next_page_button")
 focus_next = NodePath("../../margin_container/next_page_button")
 focus_previous = NodePath("../../last_page_button")
-theme_override_fonts/font = ExtResource("3_pqmjv")
 text = "return"
 script = ExtResource("5_gleon")
 

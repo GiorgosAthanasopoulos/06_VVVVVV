@@ -53,7 +53,6 @@ size_flags_stretch_ratio = 1.5
 
 [node name="title_label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_sl1te")
 theme_override_font_sizes/font_size = 100
 text = "VVVVVV"
 horizontal_alignment = 1
@@ -77,11 +76,9 @@ focus_neighbor_top = NodePath("../../margin_container_4/quit_button")
 focus_neighbor_bottom = NodePath("../../margin_container_2/options_button")
 focus_next = NodePath("../../margin_container_2/options_button")
 focus_previous = NodePath("../../margin_container_4/quit_button")
-theme_override_fonts/font = ExtResource("1_sl1te")
 text = "levels"
 script = ExtResource("2_fe2o3")
 original_text = "levels"
-WHITESPACE_BETWEEN_BRACKETS_TEXT = 1
 
 [node name="margin_container_2" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_2/v_box_container"]
 layout_mode = 2
@@ -94,11 +91,9 @@ focus_neighbor_top = NodePath("../../margin_container/levels_button")
 focus_neighbor_bottom = NodePath("../../margin_container_3/credits_button")
 focus_next = NodePath("../../margin_container_3/credits_button")
 focus_previous = NodePath("../../margin_container/levels_button")
-theme_override_fonts/font = ExtResource("1_sl1te")
 text = "options"
 script = ExtResource("3_1g8jr")
 original_text = "options"
-WHITESPACE_BETWEEN_BRACKETS_TEXT = 1
 
 [node name="margin_container_3" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_2/v_box_container"]
 layout_mode = 2
@@ -111,11 +106,9 @@ focus_neighbor_top = NodePath("../../margin_container_2/options_button")
 focus_neighbor_bottom = NodePath("../../margin_container_4/quit_button")
 focus_next = NodePath("../../margin_container_4/quit_button")
 focus_previous = NodePath("../../margin_container_2/options_button")
-theme_override_fonts/font = ExtResource("1_sl1te")
 text = "credits"
 script = ExtResource("3_1g8jr")
 original_text = "credits"
-WHITESPACE_BETWEEN_BRACKETS_TEXT = 1
 
 [node name="margin_container_4" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_2/v_box_container"]
 layout_mode = 2
@@ -128,11 +121,9 @@ focus_neighbor_top = NodePath("../../margin_container_3/credits_button")
 focus_neighbor_bottom = NodePath("../../margin_container/levels_button")
 focus_next = NodePath("../../margin_container/levels_button")
 focus_previous = NodePath("../../margin_container_3/credits_button")
-theme_override_fonts/font = ExtResource("1_sl1te")
 text = "quit"
 script = ExtResource("3_1g8jr")
 original_text = "quit"
-WHITESPACE_BETWEEN_BRACKETS_TEXT = 1
 
 [node name="margin_container_3" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
 layout_mode = 2
@@ -144,7 +135,6 @@ theme_override_constants/margin_bottom = 25
 [node name="version_label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_3"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("1_sl1te")
 theme_override_font_sizes/font_size = 25
 text = "v2.4.3"
 horizontal_alignment = 2

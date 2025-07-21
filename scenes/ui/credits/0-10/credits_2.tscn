@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dnrrnrvo5mt7v"]
+[gd_scene load_steps=6 format=3 uid="uid://dnrrnrvo5mt7v"]
 
 [ext_resource type="Script" uid="uid://uqpprymhkjav" path="res://scripts/ui/credits/credits_2.gd" id="1_c6d5e"]
 [ext_resource type="Shader" uid="uid://dblpf6kqicmwe" path="res://shaders/ui/main_menu/main_menu.gdshader" id="1_my6wb"]
 [ext_resource type="Script" uid="uid://b1xujapfac4gb" path="res://scripts/ui/common/firstly_focused_button.gd" id="2_46omw"]
-[ext_resource type="FontFile" uid="uid://by5mb5p4vx6lo" path="res://assets/fonts/press-start-2p/PressStart2P-vaV7.ttf" id="2_pw8vn"]
 [ext_resource type="Script" uid="uid://bdof8ab4mpjat" path="res://scripts/ui/common/focusable_button.gd" id="3_pw8vn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y0yxc"]
@@ -19,6 +18,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_c6d5e")
 
 [node name="color_rect" type="ColorRect" parent="."]
@@ -57,7 +58,6 @@ size_flags_stretch_ratio = 0.15
 [node name="label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_2"]
 layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource("2_pw8vn")
 text = "Roomnames are by"
 horizontal_alignment = 1
 
@@ -133,7 +133,6 @@ focus_neighbor_top = NodePath("../../margin_container_2/return_button")
 focus_neighbor_bottom = NodePath("../../previous_page_button")
 focus_next = NodePath("../../previous_page_button")
 focus_previous = NodePath("../../margin_container_2/return_button")
-theme_override_fonts/font = ExtResource("2_pw8vn")
 text = "next page"
 script = ExtResource("2_46omw")
 
@@ -145,7 +144,6 @@ focus_neighbor_top = NodePath("../margin_container/next_page_button")
 focus_neighbor_bottom = NodePath("../margin_container_2/return_button")
 focus_next = NodePath("../margin_container_2/return_button")
 focus_previous = NodePath("../margin_container/next_page_button")
-theme_override_fonts/font = ExtResource("2_pw8vn")
 text = "previous page"
 script = ExtResource("3_pw8vn")
 
@@ -161,7 +159,6 @@ focus_neighbor_top = NodePath("../../previous_page_button")
 focus_neighbor_bottom = NodePath("../../margin_container/next_page_button")
 focus_next = NodePath("../../margin_container/next_page_button")
 focus_previous = NodePath("../../previous_page_button")
-theme_override_fonts/font = ExtResource("2_pw8vn")
 text = "return"
 script = ExtResource("3_pw8vn")
 

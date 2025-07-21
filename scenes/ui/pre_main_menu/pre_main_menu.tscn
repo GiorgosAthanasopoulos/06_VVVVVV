@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://1x25pxyfukvu"]
+[gd_scene load_steps=2 format=3 uid="uid://1x25pxyfukvu"]
 
 [ext_resource type="Script" uid="uid://dijtklvvu4tvw" path="res://scripts/ui/pre_main_menu/pre_main_menu.gd" id="1_2r8jj"]
-[ext_resource type="FontFile" uid="uid://by5mb5p4vx6lo" path="res://assets/fonts/press-start-2p/PressStart2P-vaV7.ttf" id="1_q3rfp"]
 
 [node name="pre_main_menu" type="Control"]
 layout_mode = 3
@@ -41,7 +40,6 @@ size_flags_stretch_ratio = 2.0
 
 [node name="title_label" type="Label" parent="panel_container/v_box_container/margin_container"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_q3rfp")
 theme_override_font_sizes/font_size = 100
 text = "VVVVVV"
 horizontal_alignment = 1
@@ -54,7 +52,6 @@ size_flags_stretch_ratio = 0.5
 
 [node name="press_action_label" type="Label" parent="panel_container/v_box_container/margin_container_2"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_q3rfp")
 theme_override_font_sizes/font_size = 25
 text = "[ Press ACTION to Start ]"
 horizontal_alignment = 1
@@ -68,7 +65,6 @@ size_flags_stretch_ratio = 0.5
 [node name="action_hint_label" type="Label" parent="panel_container/v_box_container/margin_container_3"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.29803923, 0.29803923, 0.29803923, 1)
-theme_override_fonts/font = ExtResource("1_q3rfp")
 theme_override_font_sizes/font_size = 25
 text = "ACTION = Space, Z or V"
 horizontal_alignment = 1

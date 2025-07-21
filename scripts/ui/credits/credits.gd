@@ -1,8 +1,8 @@
 extends Control
 
 
-@export var next_page_scene_res_path: String = "res://scenes/ui/credits/credits_2.tscn"
-@export var last_page_scene_res_path: String = "res://scenes/ui/credits/credits_22.tscn"
+@export var next_page_scene_res_path: String = "res://scenes/ui/credits/0-10/credits_2.tscn"
+@export var last_page_scene_res_path: String = "res://scenes/ui/credits/21-30/credits_22.tscn"
 
 
 func _ready() -> void:
