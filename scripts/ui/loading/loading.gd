@@ -6,7 +6,7 @@ extends Control
 
 @export var loading_text: String = "LOADING... "
 @export var loading_duration_seconds: int = 3
-@export var pre_main_menu_scene_res_path: PackedScene = preload("res://scenes/ui/pre_main_menu.tscn")
+@export var pre_main_menu_scene_res_path: String = "res://scenes/ui/pre_main_menu.tscn"
 
 
 var _loading_percentage: float = 0
@@ -22,5 +22,5 @@ func update_loading_percentage(delta: float) -> void:
 	loading_label.text = loading_text + str(_loading_percentage as int) + "%"
 
 	if _loading_percentage == 100:
-		if !SceneManager.goto_scene_packed(pre_main_menu_scene_res_path):
+		if !SceneManager.goto_scene(pre_main_menu_scene_res_path):
 			SceneManager.quit(SceneManager.ERROR_EXIT_CODE)

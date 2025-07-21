@@ -20,18 +20,6 @@ func goto_scene(scene: String) -> bool:
 	return true
 
 
-func goto_scene_packed(scene: PackedScene) -> bool:
-	var error: Error = get_tree().change_scene_to_packed(scene)
-
-	if error != OK:
-		var msg: String = "".join([FAILED_CHANGE_SCENE_MSG, scene, "`: ", error_string(error)])
-		push_error(msg)
-		Dialogs.show_accept_dialog(msg)
-		return false
-
-	return true
-
-
 func quit(exit_code: int = SUCCESS_EXIT_CODE) -> void:
 	# TODO: do we have to do anything before shutting down? (e.g. saving saves, etc.) -- careful if exit code is non zero smth went wrong
 	if get_tree():

@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://1x25pxyfukvu"]
+[gd_scene load_steps=3 format=3 uid="uid://1x25pxyfukvu"]
 
 [ext_resource type="Script" uid="uid://dijtklvvu4tvw" path="res://scripts/ui/pre_main_menu/pre_main_menu.gd" id="1_2r8jj"]
 [ext_resource type="FontFile" uid="uid://by5mb5p4vx6lo" path="res://assets/fonts/press-start-2p/PressStart2P-vaV7.ttf" id="1_q3rfp"]
-[ext_resource type="PackedScene" uid="uid://4qi4wk5l3xtt" path="res://scenes/ui/main_menu.tscn" id="2_kst6b"]
 
 [node name="pre_main_menu" type="Control"]
 layout_mode = 3
@@ -14,7 +13,6 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_2r8jj")
-main_menu_scene_res_path = ExtResource("2_kst6b")
 
 [node name="color_rect" type="ColorRect" parent="."]
 layout_mode = 1

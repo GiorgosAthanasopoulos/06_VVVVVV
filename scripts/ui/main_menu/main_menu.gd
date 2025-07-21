@@ -8,9 +8,9 @@ extends Control
 @onready var yes_quit_button: Button = $pause_menu_panel_container/margin_container/v_box_container/margin_container/yes_quit_button
 
 
-@export var levels_scene: PackedScene = preload("res://scenes/ui/levels.tscn")
-@export var options_scene: PackedScene = preload("res://scenes/ui/options.tscn")
-@export var credits_scene: PackedScene = preload("res://scenes/ui/credits.tscn")
+@export var levels_scene_res_path: String = "res://scenes/ui/levels.tscn"
+@export var options_scene_res_path: String = "res://scenes/ui/options.tscn"
+@export var credits_scene_res_path: String = "res://scenes/ui/credits.tscn"
 
 
 func _ready() -> void:
@@ -30,17 +30,17 @@ func _on_quit_button_pressed() -> void:
 
 
 func _on_credits_button_pressed() -> void:
-	if !SceneManager.goto_scene_packed(credits_scene):
+	if !SceneManager.goto_scene(credits_scene_res_path):
 		SceneManager.quit(SceneManager.ERROR_EXIT_CODE)
 
 
 func _on_options_button_pressed() -> void:
-	if !SceneManager.goto_scene_packed(options_scene):
+	if !SceneManager.goto_scene(options_scene_res_path):
 		SceneManager.quit(SceneManager.ERROR_EXIT_CODE)
 
 
 func _on_levels_button_pressed() -> void:
-	if !SceneManager.goto_scene_packed(levels_scene):
+	if !SceneManager.goto_scene(levels_scene_res_path):
 		SceneManager.quit(SceneManager.ERROR_EXIT_CODE)
 
 
