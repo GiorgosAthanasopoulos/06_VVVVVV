@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://1snuo4yl3qal"]
 
-[ext_resource type="Script" uid="uid://dbq2orubdm647" path="res://scripts/ui/credits/0-10/credits_3.gd" id="1_5nser"]
+[ext_resource type="Script" uid="uid://citeo3xtodiim" path="res://scripts/ui/credits/credits.gd" id="1_5nser"]
 [ext_resource type="Shader" uid="uid://dblpf6kqicmwe" path="res://shaders/ui/main_menu/main_menu.gdshader" id="1_ac0rs"]
 [ext_resource type="Script" uid="uid://b1xujapfac4gb" path="res://scripts/ui/common/firstly_focused_button.gd" id="2_wdnx4"]
 [ext_resource type="Script" uid="uid://bdof8ab4mpjat" path="res://scripts/ui/common/focusable_button.gd" id="3_5nser"]
@@ -9,9 +9,11 @@
 shader = ExtResource("1_ac0rs")
 shader_parameter/main_color = Color(1, 1, 1, 1)
 shader_parameter/speed = 1.0
-shader_parameter/intensity = 0.25
+shader_parameter/zoom = 12.0
+shader_parameter/wall_thickness = 0.1
+shader_parameter/wall_density = 0.2
 
-[node name="credits_3" type="Control"]
+[node name="credits_3" type="Control" node_paths=PackedStringArray("next_button", "previous_button", "return_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,6 +23,11 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_5nser")
+next_page_scene_res_path = "res://scenes/ui/credits/0-10/credits_4.tscn"
+previous_page_scene_res_path = "res://scenes/ui/credits/0-10/credits_2.tscn"
+next_button = NodePath("panel_container/margin_container/v_box_container/margin_container_6/margin_container/next_page_button")
+previous_button = NodePath("panel_container/margin_container/v_box_container/margin_container_6/previous_page_button")
+return_button = NodePath("panel_container/margin_container/v_box_container/margin_container_6/margin_container_2/return_button")
 
 [node name="color_rect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_gk6mf")
