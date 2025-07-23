@@ -1,6 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://b27rlchybinia"]
+[gd_scene load_steps=6 format=3 uid="uid://b27rlchybinia"]
 
+[ext_resource type="Script" uid="uid://citeo3xtodiim" path="res://scripts/ui/credits/credits.gd" id="1_1o7a1"]
 [ext_resource type="Shader" uid="uid://dblpf6kqicmwe" path="res://shaders/ui/main_menu/main_menu.gdshader" id="1_s0lx3"]
+[ext_resource type="Script" uid="uid://b1xujapfac4gb" path="res://scripts/ui/common/firstly_focused_button.gd" id="2_v2qol"]
+[ext_resource type="Script" uid="uid://bdof8ab4mpjat" path="res://scripts/ui/common/focusable_button.gd" id="3_1o7a1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ax4hh"]
 shader = ExtResource("1_s0lx3")
@@ -10,7 +13,7 @@ shader_parameter/zoom = 12.0
 shader_parameter/wall_thickness = 0.1
 shader_parameter/wall_density = 0.2
 
-[node name="credits_10" type="Control"]
+[node name="credits_10" type="Control" node_paths=PackedStringArray("next_button", "previous_button", "return_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,6 +22,12 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("1_1o7a1")
+next_page_scene_res_path = "res://scenes/ui/credits/11-20/credits_11.tscn"
+previous_page_scene_res_path = "res://scenes/ui/credits/0-10/credits_9.tscn"
+next_button = NodePath("panel_container/margin_container/v_box_container/margin_container_8/margin_container/next_page_button")
+previous_button = NodePath("panel_container/margin_container/v_box_container/margin_container_8/previous_page_button")
+return_button = NodePath("panel_container/margin_container/v_box_container/margin_container_8/margin_container_2/return_button")
 
 [node name="color_rect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_ax4hh")
@@ -42,3 +51,142 @@ layout_mode = 2
 
 [node name="v_box_container" type="VBoxContainer" parent="panel_container/margin_container"]
 layout_mode = 2
+
+[node name="margin_container" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Translators"
+horizontal_alignment = 1
+
+[node name="margin_container_3" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_3"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Brazilian Portuguese"
+horizontal_alignment = 1
+
+[node name="label_2" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_3"]
+layout_mode = 2
+text = "Translators"
+horizontal_alignment = 1
+
+[node name="label_3" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_3"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 30
+text = "Lucas Araujo"
+horizontal_alignment = 1
+
+[node name="margin_container_4" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_4"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "Thiago Araujo"
+horizontal_alignment = 1
+
+[node name="label_2" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_4"]
+layout_mode = 2
+text = "Editing and LQA"
+horizontal_alignment = 1
+
+[node name="label_3" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_4"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 30
+text = "Ivan Lopes"
+horizontal_alignment = 1
+
+[node name="margin_container_5" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_5"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "Lucas Nunes"
+horizontal_alignment = 1
+
+[node name="label_2" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_5"]
+layout_mode = 2
+text = "European Portuguese"
+horizontal_alignment = 1
+
+[node name="label_3" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_5"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 30
+text = "Locsmiths"
+horizontal_alignment = 1
+
+[node name="margin_container_6" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_6"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Russian"
+horizontal_alignment = 1
+
+[node name="label_2" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_6"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "TheMysticSword"
+horizontal_alignment = 1
+
+[node name="margin_container_8" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="margin_container" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_8"]
+layout_mode = 2
+theme_override_constants/margin_left = -100
+
+[node name="next_page_button" type="Button" parent="panel_container/margin_container/v_box_container/margin_container_8/margin_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+focus_neighbor_top = NodePath("../../margin_container_2/return_button")
+focus_neighbor_bottom = NodePath("../../previous_page_button")
+focus_next = NodePath("../../previous_page_button")
+focus_previous = NodePath("../../margin_container_2/return_button")
+text = "next page"
+script = ExtResource("2_v2qol")
+
+[node name="previous_page_button" type="Button" parent="panel_container/margin_container/v_box_container/margin_container_8"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../margin_container/next_page_button")
+focus_neighbor_bottom = NodePath("../margin_container_2/return_button")
+focus_next = NodePath("../margin_container_2/return_button")
+focus_previous = NodePath("../margin_container/next_page_button")
+text = "previous page"
+script = ExtResource("3_1o7a1")
+
+[node name="margin_container_2" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_8"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+
+[node name="return_button" type="Button" parent="panel_container/margin_container/v_box_container/margin_container_8/margin_container_2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+focus_neighbor_top = NodePath("../../previous_page_button")
+focus_neighbor_bottom = NodePath("../../margin_container/next_page_button")
+focus_next = NodePath("../../margin_container/next_page_button")
+focus_previous = NodePath("../../previous_page_button")
+text = "return"
+script = ExtResource("3_1o7a1")
