@@ -159,10 +159,6 @@ theme_override_font_sizes/font_size = 30
 text = "Fabio Bortolucci"
 horizontal_alignment = 1
 
-[node name="margin_container_7" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
-layout_mode = 2
-size_flags_vertical = 3
-
 [node name="margin_container_8" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
 layout_mode = 2
 size_flags_vertical = 3
