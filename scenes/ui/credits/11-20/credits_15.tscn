@@ -167,11 +167,8 @@ theme_override_font_sizes/font_size = 30
 text = "Jim McGinley"
 horizontal_alignment = 1
 
-[node name="label_2" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_6/label"]
-layout_mode = 0
-offset_top = 34.0
-offset_right = 1280.0
-offset_bottom = 64.0
+[node name="label_2" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_6"]
+layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Jonathan Cartwright"
 horizontal_alignment = 1
