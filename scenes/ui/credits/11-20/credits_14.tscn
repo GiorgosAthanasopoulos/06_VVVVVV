@@ -1,17 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bmfura4l75hfo"]
+[gd_scene load_steps=5 format=3 uid="uid://bmfura4l75hfo"]
 
-[ext_resource type="Shader" uid="uid://dblpf6kqicmwe" path="res://shaders/ui/main_menu/main_menu.gdshader" id="1_5ssqc"]
 [ext_resource type="Script" uid="uid://citeo3xtodiim" path="res://scripts/ui/credits/credits.gd" id="1_crh0x"]
+[ext_resource type="PackedScene" uid="uid://rpbc53pmbchy" path="res://scenes/ui/common/menu_background.tscn" id="2_crh0x"]
 [ext_resource type="Script" uid="uid://b1xujapfac4gb" path="res://scripts/ui/common/firstly_focused_button.gd" id="2_yw548"]
 [ext_resource type="Script" uid="uid://bdof8ab4mpjat" path="res://scripts/ui/common/focusable_button.gd" id="3_crh0x"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_rauuk"]
-shader = ExtResource("1_5ssqc")
-shader_parameter/main_color = Color(1, 1, 1, 1)
-shader_parameter/speed = 1.0
-shader_parameter/zoom = 12.0
-shader_parameter/wall_thickness = 0.1
-shader_parameter/wall_density = 0.2
 
 [node name="credits_14" type="Control" node_paths=PackedStringArray("next_button", "previous_button", "return_button")]
 layout_mode = 3
@@ -29,14 +21,8 @@ next_button = NodePath("panel_container/margin_container/v_box_container/margin_
 previous_button = NodePath("panel_container/margin_container/v_box_container/margin_container_7/previous_page_button")
 return_button = NodePath("panel_container/margin_container/v_box_container/margin_container_7/margin_container_2/return_button")
 
-[node name="color_rect" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_rauuk")
+[node name="menu_background" parent="." instance=ExtResource("2_crh0x")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="panel_container" type="PanelContainer" parent="."]
 layout_mode = 1
