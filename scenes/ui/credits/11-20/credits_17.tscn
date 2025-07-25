@@ -1,26 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://8hutqm236q61"]
+[gd_scene load_steps=4 format=3 uid="uid://bjbon4vc2m7q3"]
 
-[ext_resource type="Script" uid="uid://citeo3xtodiim" path="res://scripts/ui/credits/credits.gd" id="1_qht8r"]
-[ext_resource type="PackedScene" uid="uid://rpbc53pmbchy" path="res://scenes/ui/common/menu_background.tscn" id="2_qht8r"]
-[ext_resource type="Script" uid="uid://bdof8ab4mpjat" path="res://scripts/ui/common/focusable_button.gd" id="3_qht8r"]
+[ext_resource type="Script" uid="uid://citeo3xtodiim" path="res://scripts/ui/credits/credits.gd" id="1_7jtgq"]
+[ext_resource type="PackedScene" uid="uid://rpbc53pmbchy" path="res://scenes/ui/common/menu_background.tscn" id="2_7jtgq"]
+[ext_resource type="Script" uid="uid://bdof8ab4mpjat" path="res://scripts/ui/common/focusable_button.gd" id="4_kljv0"]
 
-[node name="credits_7" type="Control" node_paths=PackedStringArray("next_button", "previous_button", "return_button")]
+[node name="credits_17" type="Control" node_paths=PackedStringArray("next_button", "previous_button", "return_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("1_qht8r")
-next_page_scene_res_path = "res://scenes/ui/credits/0-10/credits_8.tscn"
-previous_page_scene_res_path = "res://scenes/ui/credits/0-10/credits_6.tscn"
+script = ExtResource("1_7jtgq")
+next_page_scene_res_path = "res://scenes/ui/credits/11-20/credits_18.tscn"
+previous_page_scene_res_path = "res://scenes/ui/credits/11-20/credits_16.tscn"
 next_button = NodePath("panel_container/margin_container/v_box_container/margin_container_7/margin_container/next_page_button")
 previous_button = NodePath("panel_container/margin_container/v_box_container/margin_container_7/previous_page_button")
 return_button = NodePath("panel_container/margin_container/v_box_container/margin_container_7/margin_container_2/return_button")
 
-[node name="menu_background" parent="." instance=ExtResource("2_qht8r")]
+[node name="menu_background" parent="." instance=ExtResource("2_7jtgq")]
 layout_mode = 1
 
 [node name="panel_container" type="PanelContainer" parent="."]
@@ -44,8 +42,12 @@ size_flags_vertical = 3
 [node name="label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
-text = "Translators"
+text = "and also by"
 horizontal_alignment = 1
+
+[node name="margin_container_6" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
+layout_mode = 2
+size_flags_vertical = 3
 
 [node name="margin_container_2" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
 layout_mode = 2
@@ -54,20 +56,21 @@ size_flags_vertical = 3
 [node name="label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_2"]
 layout_mode = 2
 size_flags_vertical = 0
-text = "Spanish (ES)"
+theme_override_font_sizes/font_size = 30
+text = "Mitchel Stein"
 horizontal_alignment = 1
 
 [node name="label_2" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_2"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "Felia Mercader"
+theme_override_font_sizes/font_size = 30
+text = "Sean Murray"
 horizontal_alignment = 1
 
 [node name="label_3" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_2"]
 layout_mode = 2
 size_flags_vertical = 8
-theme_override_font_sizes/font_size = 40
-text = "Sara Marin"
+theme_override_font_sizes/font_size = 30
+text = "Simon Michael"
 horizontal_alignment = 1
 
 [node name="margin_container_3" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
@@ -77,20 +80,21 @@ size_flags_vertical = 3
 [node name="label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_3"]
 layout_mode = 2
 size_flags_vertical = 0
-text = "Spanish (LATAM)"
+theme_override_font_sizes/font_size = 30
+text = "Simon Schmid"
 horizontal_alignment = 1
 
 [node name="label_2" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_3"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "LocQuest"
+theme_override_font_sizes/font_size = 30
+text = "Stephen Maxwell"
 horizontal_alignment = 1
 
 [node name="label_3" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_3"]
 layout_mode = 2
 size_flags_vertical = 8
-theme_override_font_sizes/font_size = 40
-text = "Guido Di Carlo"
+theme_override_font_sizes/font_size = 30
+text = "Swing Swing Submarine"
 horizontal_alignment = 1
 
 [node name="margin_container_4" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
@@ -100,20 +104,21 @@ size_flags_vertical = 3
 [node name="label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_4"]
 layout_mode = 2
 size_flags_vertical = 0
-text = "Spanish (ARG.)"
+theme_override_font_sizes/font_size = 30
+text = "Tam Toucan"
 horizontal_alignment = 1
 
 [node name="label_2" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_4"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "LocQuest"
+theme_override_font_sizes/font_size = 30
+text = "Terry Dooher"
 horizontal_alignment = 1
 
 [node name="label_3" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_4"]
 layout_mode = 2
 size_flags_vertical = 8
-theme_override_font_sizes/font_size = 40
-text = "Guido Di Carlo"
+theme_override_font_sizes/font_size = 30
+text = "Tim W."
 horizontal_alignment = 1
 
 [node name="margin_container_5" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
@@ -123,20 +128,8 @@ size_flags_vertical = 3
 [node name="label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_5"]
 layout_mode = 2
 size_flags_vertical = 0
-text = "Persian"
-horizontal_alignment = 1
-
-[node name="label_2" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_5"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "Amir Arzani"
-horizontal_alignment = 1
-
-[node name="label_3" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_5"]
-layout_mode = 2
-size_flags_vertical = 8
-theme_override_font_sizes/font_size = 40
-text = "Mazoud Varaste"
+theme_override_font_sizes/font_size = 30
+text = "Timothy Bragan"
 horizontal_alignment = 1
 
 [node name="margin_container_7" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
@@ -156,7 +149,7 @@ focus_neighbor_bottom = NodePath("../../previous_page_button")
 focus_next = NodePath("../../previous_page_button")
 focus_previous = NodePath("../../margin_container_2/return_button")
 text = "next page"
-script = ExtResource("3_qht8r")
+script = ExtResource("4_kljv0")
 first = true
 
 [node name="previous_page_button" type="Button" parent="panel_container/margin_container/v_box_container/margin_container_7"]
@@ -168,23 +161,19 @@ focus_neighbor_bottom = NodePath("../margin_container_2/return_button")
 focus_next = NodePath("../margin_container_2/return_button")
 focus_previous = NodePath("../margin_container/next_page_button")
 text = "previous page"
-script = ExtResource("3_qht8r")
+script = ExtResource("4_kljv0")
 
 [node name="margin_container_2" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_7"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 8
 theme_override_constants/margin_left = 100
 
 [node name="return_button" type="Button" parent="panel_container/margin_container/v_box_container/margin_container_7/margin_container_2"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
 focus_neighbor_top = NodePath("../../previous_page_button")
 focus_neighbor_bottom = NodePath("../../margin_container/next_page_button")
 focus_next = NodePath("../../margin_container/next_page_button")
 focus_previous = NodePath("../../previous_page_button")
 text = "return"
-script = ExtResource("3_qht8r")
-
-[connection signal="pressed" from="panel_container/margin_container/v_box_container/margin_container_7/margin_container/next_page_button" to="." method="_on_next_page_button_pressed"]
-[connection signal="pressed" from="panel_container/margin_container/v_box_container/margin_container_7/previous_page_button" to="." method="_on_previous_page_button_pressed"]
-[connection signal="pressed" from="panel_container/margin_container/v_box_container/margin_container_7/margin_container_2/return_button" to="." method="_on_return_button_pressed"]
+script = ExtResource("4_kljv0")

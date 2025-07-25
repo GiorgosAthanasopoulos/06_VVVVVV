@@ -1,16 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://4qi4wk5l3xtt"]
+[gd_scene load_steps=5 format=3 uid="uid://4qi4wk5l3xtt"]
 
 [ext_resource type="Script" uid="uid://b34ougfgwlaox" path="res://scripts/ui/main_menu/main_menu.gd" id="1_m1kxf"]
 [ext_resource type="FontFile" uid="uid://by5mb5p4vx6lo" path="res://assets/fonts/press-start-2p/PressStart2P-vaV7.ttf" id="1_sl1te"]
-[ext_resource type="Script" uid="uid://b1xujapfac4gb" path="res://scripts/ui/common/firstly_focused_button.gd" id="2_fe2o3"]
-[ext_resource type="Shader" uid="uid://dblpf6kqicmwe" path="res://shaders/ui/main_menu/main_menu.gdshader" id="2_x2yvf"]
+[ext_resource type="PackedScene" uid="uid://rpbc53pmbchy" path="res://scenes/ui/common/menu_background.tscn" id="2_r70wa"]
 [ext_resource type="Script" uid="uid://bdof8ab4mpjat" path="res://scripts/ui/common/focusable_button.gd" id="3_1g8jr"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_uhagc"]
-shader = ExtResource("2_x2yvf")
-shader_parameter/main_color = Color(1, 1, 1, 1)
-shader_parameter/speed = 1.0
-shader_parameter/intensity = 0.25
 
 [node name="main_menu" type="Control"]
 layout_mode = 3
@@ -23,14 +16,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_m1kxf")
 
-[node name="color_rect" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_uhagc")
+[node name="menu_background" parent="." instance=ExtResource("2_r70wa")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="panel_container" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -77,8 +64,8 @@ focus_neighbor_bottom = NodePath("../../margin_container_2/options_button")
 focus_next = NodePath("../../margin_container_2/options_button")
 focus_previous = NodePath("../../margin_container_4/quit_button")
 text = "levels"
-script = ExtResource("2_fe2o3")
-original_text = "levels"
+script = ExtResource("3_1g8jr")
+first = true
 
 [node name="margin_container_2" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_2/v_box_container"]
 layout_mode = 2

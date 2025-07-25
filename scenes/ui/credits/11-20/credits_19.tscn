@@ -1,0 +1,204 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds03eqxotekl0"]
+
+[ext_resource type="Script" uid="uid://citeo3xtodiim" path="res://scripts/ui/credits/credits.gd" id="1_7luwi"]
+[ext_resource type="PackedScene" uid="uid://rpbc53pmbchy" path="res://scenes/ui/common/menu_background.tscn" id="2_7luwi"]
+[ext_resource type="Script" uid="uid://bdof8ab4mpjat" path="res://scripts/ui/common/focusable_button.gd" id="4_4caqi"]
+
+[node name="credits_19" type="Control" node_paths=PackedStringArray("next_button", "previous_button", "return_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7luwi")
+next_page_scene_res_path = "res://scenes/ui/credits/11-20/credits_20.tscn"
+previous_page_scene_res_path = "res://scenes/ui/credits/11-20/credits_18.tscn"
+next_button = NodePath("panel_container/margin_container/v_box_container/margin_container_5/margin_container/next_page_button")
+previous_button = NodePath("panel_container/margin_container/v_box_container/margin_container_5/previous_page_button")
+return_button = NodePath("panel_container/margin_container/v_box_container/margin_container_5/margin_container_2/return_button")
+
+[node name="menu_background" parent="." instance=ExtResource("2_7luwi")]
+layout_mode = 1
+
+[node name="panel_container" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="margin_container" type="MarginContainer" parent="panel_container"]
+layout_mode = 2
+
+[node name="v_box_container" type="VBoxContainer" parent="panel_container/margin_container"]
+layout_mode = 2
+
+[node name="margin_container" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "With contributions on GitHub from"
+horizontal_alignment = 1
+
+[node name="margin_container_2" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="margin_container" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_2"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = -400
+
+[node name="label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_2/margin_container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Elliott Saltar"
+horizontal_alignment = 1
+
+[node name="margin_container_2" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_2"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/margin_left = -300
+
+[node name="label_2" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_2/margin_container_2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Emmanuel Vadot"
+horizontal_alignment = 1
+
+[node name="margin_container_3" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_2"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_left = -400
+
+[node name="label_3" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_2/margin_container_3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "fraZ0R"
+horizontal_alignment = 1
+
+[node name="margin_container_3" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="margin_container" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_3"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 50
+
+[node name="label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_3/margin_container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Fredrik Ljungdahl"
+horizontal_alignment = 1
+
+[node name="margin_container_2" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_3"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/margin_left = 50
+
+[node name="label_2" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_3/margin_container_2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "iliana etaoin"
+horizontal_alignment = 1
+
+[node name="margin_container_3" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_3"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_left = 300
+
+[node name="label_3" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_3/margin_container_3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Jules de Sartiges"
+horizontal_alignment = 1
+
+[node name="margin_container_4" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="margin_container" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_4"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 350
+
+[node name="label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_4/margin_container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Keith Stellyes"
+horizontal_alignment = 1
+
+[node name="margin_container_2" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_4"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/margin_left = 200
+
+[node name="label_2" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_4/margin_container_2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "KyoZM"
+horizontal_alignment = 1
+
+[node name="margin_container_3" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_4"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_left = 450
+
+[node name="label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_4/margin_container_3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "leo vriska"
+horizontal_alignment = 1
+
+[node name="margin_container_5" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 20
+
+[node name="margin_container" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_5"]
+layout_mode = 2
+theme_override_constants/margin_left = -100
+
+[node name="next_page_button" type="Button" parent="panel_container/margin_container/v_box_container/margin_container_5/margin_container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+focus_neighbor_top = NodePath("../../margin_container_2/return_button")
+focus_neighbor_bottom = NodePath("../../previous_page_button")
+focus_next = NodePath("../../previous_page_button")
+focus_previous = NodePath("../../margin_container_2/return_button")
+text = "next page"
+script = ExtResource("4_4caqi")
+first = true
+
+[node name="previous_page_button" type="Button" parent="panel_container/margin_container/v_box_container/margin_container_5"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../margin_container/next_page_button")
+focus_neighbor_bottom = NodePath("../margin_container_2/return_button")
+focus_next = NodePath("../margin_container_2/return_button")
+focus_previous = NodePath("../margin_container/next_page_button")
+text = "previous page"
+script = ExtResource("4_4caqi")
+
+[node name="margin_container_2" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_5"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+
+[node name="return_button" type="Button" parent="panel_container/margin_container/v_box_container/margin_container_5/margin_container_2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+focus_neighbor_top = NodePath("../../previous_page_button")
+focus_neighbor_bottom = NodePath("../../margin_container/next_page_button")
+focus_next = NodePath("../../margin_container/next_page_button")
+focus_previous = NodePath("../../previous_page_button")
+text = "return"
+script = ExtResource("4_4caqi")

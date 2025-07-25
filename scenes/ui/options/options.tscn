@@ -1,0 +1,209 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4hbtevjwf6t4"]
+
+[ext_resource type="PackedScene" uid="uid://rpbc53pmbchy" path="res://scenes/ui/common/menu_background.tscn" id="1_6j0w6"]
+[ext_resource type="Script" uid="uid://c3tuu5rjvy2jt" path="res://scripts/ui/options/options.gd" id="1_7u8vf"]
+[ext_resource type="Script" uid="uid://cororgm6t3or1" path="res://scripts/ui/common/option_button.gd" id="2_3hhku"]
+
+[node name="options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_7u8vf")
+previous_page_scene_res_path = "res://scenes/ui/main_menu/main_menu.tscn"
+
+[node name="menu_background" parent="." instance=ExtResource("1_6j0w6")]
+layout_mode = 1
+
+[node name="panel_container" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="margin_container" type="MarginContainer" parent="panel_container"]
+layout_mode = 2
+
+[node name="v_box_container" type="VBoxContainer" parent="panel_container/margin_container"]
+layout_mode = 2
+
+[node name="margin_container" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="title_label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+
+[node name="margin_container_2" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="description_label" type="Label" parent="panel_container/margin_container/v_box_container/margin_container_2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
+[node name="margin_container_3" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 20
+
+[node name="margin_container" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_3"]
+layout_mode = 2
+theme_override_constants/margin_left = -300
+
+[node name="gameplay_button" type="Button" parent="panel_container/margin_container/v_box_container/margin_container_3/margin_container" node_paths=PackedStringArray("title_label", "description_label")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+focus_neighbor_top = NodePath("../../../margin_container_5/margin_container/return_button")
+focus_neighbor_bottom = NodePath("../../margin_container_2/graphics_button")
+focus_next = NodePath("../../margin_container_2/graphics_button")
+focus_previous = NodePath("../../../margin_container_5/margin_container/return_button")
+text = "gameplay"
+script = ExtResource("2_3hhku")
+title_label = NodePath("../../../margin_container/title_label")
+description_label = NodePath("../../../margin_container_2/description_label")
+title_override = "Gameplay Options"
+description_override = "Adjust various gameplay settings."
+target_scene = "res://scenes/ui/options/gameplay.tscn"
+first = true
+
+[node name="margin_container_2" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_3"]
+layout_mode = 2
+theme_override_constants/margin_left = -200
+
+[node name="graphics_button" type="Button" parent="panel_container/margin_container/v_box_container/margin_container_3/margin_container_2" node_paths=PackedStringArray("title_label", "description_label")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../../margin_container/gameplay_button")
+focus_neighbor_bottom = NodePath("../../margin_container_3/audio_button")
+focus_next = NodePath("../../margin_container_3/audio_button")
+focus_previous = NodePath("../../margin_container/gameplay_button")
+text = "graphics"
+script = ExtResource("2_3hhku")
+title_label = NodePath("../../../margin_container/title_label")
+description_label = NodePath("../../../margin_container_2/description_label")
+title_override = "Graphics Options"
+description_override = "Adjust screen settings."
+target_scene = "res://scenes/ui/options/graphics.tscn"
+
+[node name="margin_container_3" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_3"]
+layout_mode = 2
+theme_override_constants/margin_left = -100
+
+[node name="audio_button" type="Button" parent="panel_container/margin_container/v_box_container/margin_container_3/margin_container_3" node_paths=PackedStringArray("title_label", "description_label")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+focus_neighbor_top = NodePath("../../margin_container_2/graphics_button")
+focus_neighbor_bottom = NodePath("../../../margin_container_4/margin_container/game_pad_button")
+focus_next = NodePath("../../../margin_container_4/margin_container/game_pad_button")
+focus_previous = NodePath("../../margin_container_2/graphics_button")
+text = "audio"
+script = ExtResource("2_3hhku")
+title_label = NodePath("../../../margin_container/title_label")
+description_label = NodePath("../../../margin_container_2/description_label")
+title_override = "Audio Options"
+description_override = "Adjust volume settings."
+target_scene = "res://scenes/ui/options/audio.tscn"
+
+[node name="margin_container_4" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 20
+
+[node name="margin_container" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_4"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+
+[node name="game_pad_button" type="Button" parent="panel_container/margin_container/v_box_container/margin_container_4/margin_container" node_paths=PackedStringArray("title_label", "description_label")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+focus_neighbor_top = NodePath("../../../margin_container_3/margin_container_3/audio_button")
+focus_neighbor_bottom = NodePath("../../margin_container_2/accessibility_button")
+focus_next = NodePath("../../margin_container_2/accessibility_button")
+focus_previous = NodePath("../../../margin_container_3/margin_container_3/audio_button")
+text = "game pad"
+script = ExtResource("2_3hhku")
+title_label = NodePath("../../../margin_container/title_label")
+description_label = NodePath("../../../margin_container_2/description_label")
+title_override = "Game Pad Options"
+description_override = "Rebind your controller's buttons and
+ adjust sensitivity."
+target_scene = "res://scenes/ui/options/gamepad.tscn"
+
+[node name="margin_container_2" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_4"]
+layout_mode = 2
+theme_override_constants/margin_left = 250
+
+[node name="accessibility_button" type="Button" parent="panel_container/margin_container/v_box_container/margin_container_4/margin_container_2" node_paths=PackedStringArray("title_label", "description_label")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../../margin_container/game_pad_button")
+focus_neighbor_bottom = NodePath("../../margin_container_3/language_button")
+focus_next = NodePath("../../margin_container_3/language_button")
+focus_previous = NodePath("../../margin_container/game_pad_button")
+text = "accessibility"
+script = ExtResource("2_3hhku")
+title_label = NodePath("../../../margin_container/title_label")
+description_label = NodePath("../../../margin_container_2/description_label")
+title_override = "Accessibility"
+description_override = "Disable screen effects, enable
+slowdown modes or invincibility."
+target_scene = "res://scenes/ui/options/accessibility.tscn"
+
+[node name="margin_container_3" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_4"]
+layout_mode = 2
+theme_override_constants/margin_left = 300
+
+[node name="language_button" type="Button" parent="panel_container/margin_container/v_box_container/margin_container_4/margin_container_3" node_paths=PackedStringArray("title_label", "description_label")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+focus_neighbor_top = NodePath("../../margin_container_2/accessibility_button")
+focus_neighbor_bottom = NodePath("../../../margin_container_5/margin_container/return_button")
+focus_next = NodePath("../../../margin_container_5/margin_container/return_button")
+focus_previous = NodePath("../../margin_container_2/accessibility_button")
+text = "language"
+script = ExtResource("2_3hhku")
+title_label = NodePath("../../../margin_container/title_label")
+description_label = NodePath("../../../margin_container_2/description_label")
+title_override = "Language"
+description_override = "Change the language."
+target_scene = "res://scenes/ui/options/language.tscn"
+
+[node name="margin_container_5" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 20
+
+[node name="margin_container" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_5"]
+layout_mode = 2
+theme_override_constants/margin_left = 400
+
+[node name="return_button" type="Button" parent="panel_container/margin_container/v_box_container/margin_container_5/margin_container" node_paths=PackedStringArray("title_label", "description_label")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+focus_neighbor_top = NodePath("../../../margin_container_4/margin_container_3/language_button")
+focus_neighbor_bottom = NodePath("../../../margin_container_3/margin_container/gameplay_button")
+focus_next = NodePath("../../../margin_container_3/margin_container/gameplay_button")
+focus_previous = NodePath("../../../margin_container_4/margin_container_3/language_button")
+text = "return"
+script = ExtResource("2_3hhku")
+title_label = NodePath("../../../margin_container/title_label")
+description_label = NodePath("../../../margin_container_2/description_label")
+target_scene = "res://scenes/ui/main_menu/main_menu.tscn"

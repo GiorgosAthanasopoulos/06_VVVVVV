@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://rpbc53pmbchy"]
+
+[ext_resource type="Shader" uid="uid://dblpf6kqicmwe" path="res://shaders/ui/main_menu/main_menu.gdshader" id="1_2y1mb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2y1mb"]
+shader = ExtResource("1_2y1mb")
+shader_parameter/main_color = Color(1, 1, 1, 1)
+shader_parameter/speed = 0.5
+shader_parameter/zoom = 12.0
+shader_parameter/wall_thickness = 0.1
+shader_parameter/wall_density = 0.2
+
+[node name="menu_background" type="ColorRect"]
+material = SubResource("ShaderMaterial_2y1mb")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3

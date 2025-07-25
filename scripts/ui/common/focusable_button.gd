@@ -1,10 +1,11 @@
 extends Button
 
 
-@export var original_text: String = text
+@export var original_text: String = ""
 @export var WHITESPACE_BETWEEN_BRACKETS_TEXT: int = 1
 @export var left_char: String = "["
 @export var right_char: String = "]"
+@export var first: bool = false
 
 
 func _ready() -> void:
@@ -13,6 +14,9 @@ func _ready() -> void:
 
 	var __: Error = self.focus_entered.connect(_on_focus_entered) as Error
 	__ = self.focus_exited.connect(_on_focus_exited) as Error
+
+	if first:
+		grab_focus()
 
 
 func _on_focus_entered() -> void:
