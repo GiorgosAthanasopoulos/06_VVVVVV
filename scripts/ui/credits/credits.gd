@@ -1,8 +1,8 @@
 extends Control
 
 
-@export var next_page_scene_res_path: String
-@export var previous_page_scene_res_path: String
+@export var next_page_scene_res_path: String = ""
+@export var previous_page_scene_res_path: String = ""
 
 @export var next_button: Button
 @export var previous_button: Button

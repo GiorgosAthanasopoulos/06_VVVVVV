@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c55pxvigxi3ci"]
+[gd_scene load_steps=4 format=3 uid="uid://c55pxvigxi3ci"]
 
 [ext_resource type="Script" uid="uid://citeo3xtodiim" path="res://scripts/ui/credits/credits.gd" id="1_5vu0x"]
 [ext_resource type="PackedScene" uid="uid://rpbc53pmbchy" path="res://scenes/ui/common/menu_background.tscn" id="2_5vu0x"]
-[ext_resource type="Script" uid="uid://b1xujapfac4gb" path="res://scripts/ui/common/firstly_focused_button.gd" id="3_006dv"]
 [ext_resource type="Script" uid="uid://bdof8ab4mpjat" path="res://scripts/ui/common/focusable_button.gd" id="4_ok5qv"]
 
 [node name="credits_21" type="Control" node_paths=PackedStringArray("next_button", "previous_button", "return_button")]
@@ -164,7 +163,8 @@ focus_neighbor_bottom = NodePath("../../previous_page_button")
 focus_next = NodePath("../../previous_page_button")
 focus_previous = NodePath("../../margin_container_2/return_button")
 text = "next page"
-script = ExtResource("3_006dv")
+script = ExtResource("4_ok5qv")
+first = true
 
 [node name="previous_page_button" type="Button" parent="panel_container/margin_container/v_box_container/margin_container_5"]
 layout_mode = 2

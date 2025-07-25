@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bsd71cbb7rt3h"]
+[gd_scene load_steps=4 format=3 uid="uid://bsd71cbb7rt3h"]
 
 [ext_resource type="Script" uid="uid://citeo3xtodiim" path="res://scripts/ui/credits/credits.gd" id="1_7qopl"]
-[ext_resource type="Script" uid="uid://b1xujapfac4gb" path="res://scripts/ui/common/firstly_focused_button.gd" id="2_0cp05"]
 [ext_resource type="PackedScene" uid="uid://rpbc53pmbchy" path="res://scenes/ui/common/menu_background.tscn" id="2_7qopl"]
 [ext_resource type="Script" uid="uid://bdof8ab4mpjat" path="res://scripts/ui/common/focusable_button.gd" id="3_7qopl"]
 
@@ -116,7 +115,8 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "next page"
-script = ExtResource("2_0cp05")
+script = ExtResource("3_7qopl")
+first = true
 
 [node name="previous_page_button" type="Button" parent="panel_container/margin_container/v_box_container/margin_container_6"]
 layout_mode = 2
