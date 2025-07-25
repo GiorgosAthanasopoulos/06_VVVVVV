@@ -1,4 +1,5 @@
 extends "res://scripts/ui/common/focusable_button.gd"
+class_name OptionButton_
 
 
 @export var title_label: Label
