@@ -25,5 +25,6 @@ func goto_scene(scene: String) -> bool:
 
 func quit(exit_code: int = SUCCESS_EXIT_CODE) -> void:
 	# TODO: do we have to do anything before shutting down? (e.g. saving saves, etc.) -- careful if exit code is non zero smth went wrong
+	# TODO: play black bar from left to right at different speeds animation on exit
 	if get_tree():
 		get_tree().quit(exit_code)

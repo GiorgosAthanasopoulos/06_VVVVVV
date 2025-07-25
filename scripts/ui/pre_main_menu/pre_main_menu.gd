@@ -1,6 +1,9 @@
 extends Control
 
 
+# TODO: play white splash effect when going to main menu scene
+
+
 @export var action_input_map: String = "ui_accept"
 
 
