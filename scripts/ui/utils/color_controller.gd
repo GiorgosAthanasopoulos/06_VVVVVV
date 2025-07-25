@@ -1,4 +1,4 @@
-extends ColorRect
+extends Node
 
 
 func get_next_color() -> Color:
