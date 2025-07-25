@@ -18,9 +18,9 @@ config/icon="res://assets/icons/godot/icon.svg"
 
 [autoload]
 
-Dialogs="*res://scripts/utils/dialogs.gd"
-SceneManager="*res://scripts/utils/scene_manager.gd"
-ColorController="*res://scripts/utils/color_controller.gd"
+Dialogs="*res://scripts/ui/utils/dialogs.gd"
+SceneManager="*res://scripts/ui/utils/scene_manager.gd"
+ColorController="*res://scripts/ui/utils/color_controller.gd"
 
 [debug]
 
