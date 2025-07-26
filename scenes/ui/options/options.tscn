@@ -75,7 +75,7 @@ title_label = NodePath("../../../margin_container/title_label")
 description_label = NodePath("../../../margin_container_2/description_label")
 title_override = "Gameplay Options"
 description_override = "Adjust various gameplay settings."
-target_scene = "res://scenes/ui/options/gameplay.tscn"
+target_scene = "res://scenes/ui/options/gameplay/gameplay.tscn"
 first = true
 
 [node name="margin_container_2" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_3"]
@@ -96,7 +96,7 @@ title_label = NodePath("../../../margin_container/title_label")
 description_label = NodePath("../../../margin_container_2/description_label")
 title_override = "Graphics Options"
 description_override = "Adjust screen settings."
-target_scene = "res://scenes/ui/options/graphics.tscn"
+target_scene = "res://scenes/ui/options/graphics/graphics.tscn"
 
 [node name="margin_container_3" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_3"]
 layout_mode = 2
@@ -116,7 +116,7 @@ title_label = NodePath("../../../margin_container/title_label")
 description_label = NodePath("../../../margin_container_2/description_label")
 title_override = "Audio Options"
 description_override = "Adjust volume settings."
-target_scene = "res://scenes/ui/options/audio.tscn"
+target_scene = "res://scenes/ui/options/audio/audio.tscn"
 
 [node name="margin_container_4" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
 layout_mode = 2
@@ -142,7 +142,7 @@ description_label = NodePath("../../../margin_container_2/description_label")
 title_override = "Game Pad Options"
 description_override = "Rebind your controller's buttons and
  adjust sensitivity."
-target_scene = "res://scenes/ui/options/gamepad.tscn"
+target_scene = "res://scenes/ui/options/gamepad/gamepad.tscn"
 
 [node name="margin_container_2" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_4"]
 layout_mode = 2
@@ -163,7 +163,7 @@ description_label = NodePath("../../../margin_container_2/description_label")
 title_override = "Accessibility"
 description_override = "Disable screen effects, enable
 slowdown modes or invincibility."
-target_scene = "res://scenes/ui/options/accessibility.tscn"
+target_scene = "res://scenes/ui/options/accessibility/accessibility.tscn"
 
 [node name="margin_container_3" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_4"]
 layout_mode = 2
@@ -183,7 +183,7 @@ title_label = NodePath("../../../margin_container/title_label")
 description_label = NodePath("../../../margin_container_2/description_label")
 title_override = "Language"
 description_override = "Change the language."
-target_scene = "res://scenes/ui/options/language.tscn"
+target_scene = "res://scenes/ui/options/language/language.tscn"
 
 [node name="margin_container_5" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
 layout_mode = 2

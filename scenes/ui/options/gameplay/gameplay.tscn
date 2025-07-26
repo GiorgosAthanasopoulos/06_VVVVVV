@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://bsu1y6xb8i2rr"]
 
-[ext_resource type="PackedScene" uid="uid://rpbc53pmbchy" path="res://scenes/ui/common/menu_background.tscn" id="1_hjcw8"]
-[ext_resource type="Script" uid="uid://crnukmom36mq1" path="res://scripts/ui/options/gameplay.gd" id="1_ipem2"]
-[ext_resource type="Script" uid="uid://cororgm6t3or1" path="res://scripts/ui/common/option_button.gd" id="2_xhq3c"]
+[ext_resource type="Script" uid="uid://crnukmom36mq1" path="res://scripts/ui/options/gameplay.gd" id="1_eld3g"]
+[ext_resource type="PackedScene" uid="uid://rpbc53pmbchy" path="res://scenes/ui/common/menu_background.tscn" id="2_uiig6"]
+[ext_resource type="Script" uid="uid://cororgm6t3or1" path="res://scripts/ui/common/option_button.gd" id="3_28ey0"]
 
 [node name="gameplay" type="Control"]
 layout_mode = 3
@@ -13,9 +13,9 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_ipem2")
+script = ExtResource("1_eld3g")
 
-[node name="menu_background" parent="." instance=ExtResource("1_hjcw8")]
+[node name="menu_background" parent="." instance=ExtResource("2_uiig6")]
 layout_mode = 1
 
 [node name="panel_container" type="PanelContainer" parent="."]
@@ -83,7 +83,7 @@ focus_neighbor_bottom = NodePath("../../margin_container_2/toggle_fps_button")
 focus_next = NodePath("../../margin_container_2/toggle_fps_button")
 focus_previous = NodePath("../../../margin_container_4/margin_container/return_button")
 text = "flip mode"
-script = ExtResource("2_xhq3c")
+script = ExtResource("3_28ey0")
 title_label = NodePath("../../../margin_container/margin_container/title_label")
 description_label = NodePath("../../../margin_container/margin_container_2/description_label")
 hint_label = NodePath("../../../margin_container/margin_container_3/hint_label")
@@ -105,7 +105,7 @@ focus_neighbor_bottom = NodePath("../../margin_container/speedrun_options_button
 focus_next = NodePath("../../margin_container/speedrun_options_button")
 focus_previous = NodePath("../../margin_container_3/flip_mode_button")
 text = "toggle fps "
-script = ExtResource("2_xhq3c")
+script = ExtResource("3_28ey0")
 title_label = NodePath("../../../margin_container/margin_container/title_label")
 description_label = NodePath("../../../margin_container/margin_container_2/description_label")
 hint_label = NodePath("../../../margin_container/margin_container_3/hint_label")
@@ -123,17 +123,18 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 focus_neighbor_top = NodePath("../../margin_container_2/toggle_fps_button")
-focus_neighbor_bottom = NodePath("../../../margin_container_3/margin_container_3/advanced_options_button")
-focus_next = NodePath("../../../margin_container_3/margin_container_3/advanced_options_button")
+focus_neighbor_bottom = NodePath("../../../margin_container_3/margin_container_3/s")
+focus_next = NodePath("../../../margin_container_3/margin_container_3/s")
 focus_previous = NodePath("../../margin_container_2/toggle_fps_button")
 text = "speedrun options"
-script = ExtResource("2_xhq3c")
+script = ExtResource("3_28ey0")
 title_label = NodePath("../../../margin_container/margin_container/title_label")
 description_label = NodePath("../../../margin_container/margin_container_2/description_label")
 hint_label = NodePath("../../../margin_container/margin_container_3/hint_label")
 title_override = "Speedrunner Options"
 description_override = "Access some advanced settings that
 might be of interest to speedrunners."
+target_scene = "res://scenes/ui/options/gameplay/speedrun.tscn"
 
 [node name="margin_container_3" type="MarginContainer" parent="panel_container/margin_container/v_box_container"]
 layout_mode = 2
@@ -144,7 +145,7 @@ theme_override_constants/margin_top = 40
 layout_mode = 2
 theme_override_constants/margin_left = 250
 
-[node name="advanced_options_button" type="Button" parent="panel_container/margin_container/v_box_container/margin_container_3/margin_container_3" node_paths=PackedStringArray("title_label", "description_label", "hint_label")]
+[node name="s" type="Button" parent="panel_container/margin_container/v_box_container/margin_container_3/margin_container_3" node_paths=PackedStringArray("title_label", "description_label", "hint_label")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
@@ -153,12 +154,13 @@ focus_neighbor_bottom = NodePath("../../margin_container_2/clear_main_game_data_
 focus_next = NodePath("../../margin_container_2/clear_main_game_data_button")
 focus_previous = NodePath("../../../margin_container_2/margin_container/speedrun_options_button")
 text = "advanced options"
-script = ExtResource("2_xhq3c")
+script = ExtResource("3_28ey0")
 title_label = NodePath("../../../margin_container/margin_container/title_label")
 description_label = NodePath("../../../margin_container/margin_container_2/description_label")
 hint_label = NodePath("../../../margin_container/margin_container_3/hint_label")
 title_override = "Advanced Options"
 description_override = "All other gameplay settings."
+target_scene = "res://scenes/ui/options/gameplay/advanced.tscn"
 
 [node name="margin_container_2" type="MarginContainer" parent="panel_container/margin_container/v_box_container/margin_container_3"]
 layout_mode = 2
@@ -168,12 +170,12 @@ theme_override_constants/margin_left = 450
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-focus_neighbor_top = NodePath("../../margin_container_3/advanced_options_button")
+focus_neighbor_top = NodePath("../../margin_container_3/s")
 focus_neighbor_bottom = NodePath("../../margin_container/clear_custom_level_data_button")
 focus_next = NodePath("../../margin_container/clear_custom_level_data_button")
-focus_previous = NodePath("../../margin_container_3/advanced_options_button")
+focus_previous = NodePath("../../margin_container_3/s")
 text = "clear main game data"
-script = ExtResource("2_xhq3c")
+script = ExtResource("3_28ey0")
 title_label = NodePath("../../../margin_container/margin_container/title_label")
 description_label = NodePath("../../../margin_container/margin_container_2/description_label")
 hint_label = NodePath("../../../margin_container/margin_container_3/hint_label")
@@ -194,7 +196,7 @@ focus_neighbor_bottom = NodePath("../../../margin_container_4/margin_container/r
 focus_next = NodePath("../../../margin_container_4/margin_container/return_button")
 focus_previous = NodePath("../../margin_container_2/clear_main_game_data_button")
 text = "clear custom level data"
-script = ExtResource("2_xhq3c")
+script = ExtResource("3_28ey0")
 title_label = NodePath("../../../margin_container/margin_container/title_label")
 description_label = NodePath("../../../margin_container/margin_container_2/description_label")
 hint_label = NodePath("../../../margin_container/margin_container_3/hint_label")
@@ -221,7 +223,7 @@ focus_neighbor_bottom = NodePath("../../../margin_container_2/margin_container_3
 focus_next = NodePath("../../../margin_container_2/margin_container_3/flip_mode_button")
 focus_previous = NodePath("../../../margin_container_3/margin_container/clear_custom_level_data_button")
 text = "return"
-script = ExtResource("2_xhq3c")
+script = ExtResource("3_28ey0")
 title_label = NodePath("../../../margin_container/margin_container/title_label")
 description_label = NodePath("../../../margin_container/margin_container_2/description_label")
 hint_label = NodePath("../../../margin_container/margin_container_3/hint_label")
