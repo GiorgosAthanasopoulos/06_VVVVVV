@@ -229,6 +229,36 @@ description_label = NodePath("../../../margin_container/margin_container_2/descr
 hint_label = NodePath("../../../margin_container/margin_container_3/hint_label")
 target_scene = "res://scenes/ui/options/options.tscn"
 
+[node name="clear_main_game_data_popup" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="margin_container" type="MarginContainer" parent="clear_main_game_data_popup"]
+layout_mode = 2
+
+[node name="v_box_container" type="VBoxContainer" parent="clear_main_game_data_popup/margin_container"]
+layout_mode = 2
+
+[node name="clear_custom_level_data_popup" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="margin_container" type="MarginContainer" parent="clear_custom_level_data_popup"]
+layout_mode = 2
+
+[node name="v_box_container" type="VBoxContainer" parent="clear_custom_level_data_popup/margin_container"]
+layout_mode = 2
+
 [connection signal="pressed" from="panel_container/margin_container/v_box_container/margin_container_2/margin_container_3/flip_mode_button" to="." method="_on_flip_mode_button_pressed"]
 [connection signal="pressed" from="panel_container/margin_container/v_box_container/margin_container_2/margin_container_2/toggle_fps_button" to="." method="_on_toggle_fps_button_pressed"]
 [connection signal="pressed" from="panel_container/margin_container/v_box_container/margin_container_3/margin_container_2/clear_main_game_data_button" to="." method="_on_clear_main_game_data_button_pressed"]
