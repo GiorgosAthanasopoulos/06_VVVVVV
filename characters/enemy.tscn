@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cqea76qq364qp"]
+
+[ext_resource type="Texture2D" uid="uid://b0iimkkn4orfd" path="res://assets/enemy.png" id="1_7k104"]
+[ext_resource type="Script" uid="uid://3cxs3qvqw1tk" path="res://characters/enemy.gd" id="1_nhupr"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_aasmq"]
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aasmq"]
+size = Vector2(50, 50)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=88018383]
+script = ExtResource("1_nhupr")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1245467779]
+mesh = SubResource("QuadMesh_aasmq")
+texture = ExtResource("1_7k104")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2137091816]
+shape = SubResource("RectangleShape2D_aasmq")

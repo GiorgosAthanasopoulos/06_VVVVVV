@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://d4lrwgua0c7o6"]
+
+[ext_resource type="Script" uid="uid://cj1vs4efrp2uw" path="res://environment/moving_platform.gd" id="1_q06lf"]
+[ext_resource type="Texture2D" uid="uid://dgc7yai65kw8q" path="res://assets/platform.png" id="2_u7wc6"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_aasmq"]
+size = Vector2(300, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aasmq"]
+size = Vector2(300, 51)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8h3ji"]
+
+[node name="moving_platform" type="AnimatableBody2D" unique_id=1538497627 node_paths=PackedStringArray("left_boundary", "right_boundary", "top_boundary", "bottom_boundary")]
+script = ExtResource("1_q06lf")
+left_boundary = NodePath("left")
+right_boundary = NodePath("right")
+top_boundary = NodePath("top")
+bottom_boundary = NodePath("bottom")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=476092268]
+texture_repeat = 2
+mesh = SubResource("QuadMesh_aasmq")
+texture = ExtResource("2_u7wc6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=289926713]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_aasmq")
+
+[node name="left" type="Area2D" parent="." unique_id=835352985]
+position = Vector2(-300, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left" unique_id=1316319064]
+shape = SubResource("RectangleShape2D_8h3ji")
+
+[node name="right" type="Area2D" parent="." unique_id=921010356]
+position = Vector2(300, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right" unique_id=1747382569]
+shape = SubResource("RectangleShape2D_8h3ji")
+
+[node name="top" type="Area2D" parent="." unique_id=1916864415]
+position = Vector2(0, 150)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="top" unique_id=1289787190]
+shape = SubResource("RectangleShape2D_8h3ji")
+
+[node name="bottom" type="Area2D" parent="." unique_id=1256395087]
+position = Vector2(0, -150)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bottom" unique_id=1660873329]
+shape = SubResource("RectangleShape2D_8h3ji")

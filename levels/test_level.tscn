@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://b3bcf0bt7ag5"]
+
+[ext_resource type="Texture2D" uid="uid://bmq6k1ewly5a0" path="res://assets/ground.png" id="1_o6mel"]
+[ext_resource type="PackedScene" uid="uid://bekk2osn6y8rj" path="res://characters/player.tscn" id="1_w7r7j"]
+[ext_resource type="Texture2D" uid="uid://8ee3ihg3oowe" path="res://assets/ceiling.png" id="2_e7anx"]
+[ext_resource type="PackedScene" uid="uid://balg0tc4mq1ab" path="res://environment/spikes.tscn" id="2_o6mel"]
+[ext_resource type="PackedScene" uid="uid://d4lrwgua0c7o6" path="res://environment/moving_platform.tscn" id="3_e7anx"]
+[ext_resource type="PackedScene" uid="uid://cqea76qq364qp" path="res://characters/enemy.tscn" id="4_ur00s"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_aasmq"]
+size = Vector2(1500, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aasmq"]
+size = Vector2(1498, 52)
+
+[node name="test_level" type="Node2D" unique_id=1581651320]
+
+[node name="bottom_ground" type="StaticBody2D" parent="." unique_id=1314586358]
+position = Vector2(645, 720)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="bottom_ground" unique_id=451150283]
+mesh = SubResource("QuadMesh_aasmq")
+texture = ExtResource("1_o6mel")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bottom_ground" unique_id=678862457]
+shape = SubResource("RectangleShape2D_aasmq")
+
+[node name="top_ground" type="StaticBody2D" parent="." unique_id=680638656]
+position = Vector2(645, 0)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="top_ground" unique_id=1288194785]
+mesh = SubResource("QuadMesh_aasmq")
+texture = ExtResource("2_e7anx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="top_ground" unique_id=1624781723]
+shape = SubResource("RectangleShape2D_aasmq")
+
+[node name="player" parent="." unique_id=100506577 instance=ExtResource("1_w7r7j")]
+position = Vector2(80, 670)
+
+[node name="Spikes" parent="." unique_id=1379248702 instance=ExtResource("2_o6mel")]
+position = Vector2(264, 648)
+
+[node name="moving_platform" parent="." unique_id=1538497627 instance=ExtResource("3_e7anx")]
+position = Vector2(704, 528)
+
+[node name="Enemy" parent="." unique_id=88018383 instance=ExtResource("4_ur00s")]
+position = Vector2(1160, 670)

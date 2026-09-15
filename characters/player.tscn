@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bekk2osn6y8rj"]
+
+[ext_resource type="Script" uid="uid://bl8xh8fdmv3ct" path="res://characters/player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://clyu54y07d5qo" path="res://assets/player.png" id="2_onrkg"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_8h3ji"]
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aasmq"]
+size = Vector2(50, 50)
+
+[node name="player" type="CharacterBody2D" unique_id=1802831201 groups=["player"]]
+position = Vector2(0, -1)
+script = ExtResource("1_4flbx")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1115151449]
+mesh = SubResource("QuadMesh_8h3ji")
+texture = ExtResource("2_onrkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=497433538]
+shape = SubResource("RectangleShape2D_aasmq")
